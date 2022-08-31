@@ -2,7 +2,7 @@ import json
 
 class jsonParser:
     def get_json(fname):
-        jfile = open(fname)
+        jfile = open(fname, encoding="utf8")
         rawjson = json.load(jfile)
         jfile.close
         return rawjson

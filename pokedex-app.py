@@ -4,10 +4,12 @@ from pokedex import Pokedex
 app = Flask(__name__)
 dex = Pokedex("pokedex")
 
+# Returns all Pokemon types within the database
 @app.route("/types", methods=["GET"])
 def get_types():
     return {"types": dex.get_all_types()}
 
+# Pokemon query entry point
 @app.route("/pokemon", methods=["GET"])
 @app.route("/pokemon/<lang>", methods=["GET"])
 def get_pokemon(lang=""):
@@ -36,11 +38,13 @@ def get_pokemon(lang=""):
             ret = {"content": [tmp]}
     return ret
 
+# Updates the specified Pokemon entry to be "caught"
 @app.route("/catch/<int:id>", methods=["GET"])
 def catch_pokemon(id=0):
     dex.catch(id)
     return {"content": [dex.query_by_id(id)]}
 
+# Updates the specified Pokemon entry to not be "caught"
 @app.route("/release/<int:id>", methods=["GET"])
 def release_pokemon(id=0):
     dex.release(id)

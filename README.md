@@ -46,17 +46,17 @@ Note: make sure Python is installed and up-to-date on your system. [Download Pyt
 
 ``source venv/bin/activate``
 
-``pip3 install flask``
+``pip3 install Flask``
 
 - Windows: 
 
-``python -m venv venv``
+``py -m venv venv``
 
-``.venv\bin\activate``
+``.\venv\bin\activate``
 
-``pip install flask``
+``pip install Flask``
 
-2. Create the Pokemon database:
+2. While running in the virtual environment, create the Pokemon database:
 - Mac: ``python3 makedb.py``
 - Windows: ``python makedb.py``
 
@@ -66,3 +66,13 @@ Note: make sure Python is installed and up-to-date on your system. [Download Pyt
 
 The server will be running at localhost:5000 by default. Enter the URL in your browser or use the curl command line tool to make a request:
 ``curl 'http://127.0.0.1:5000/pokemon'``
+
+## Further Considerations/Future Work
+
+Due to limited time during this week due to professional obligations and personal matters, I was not able to fully realize my goals in this project. Listed below are several aspects that I wish to fulfill with this project over time.
+
+- Front-end UI: A client application that will provide access to the functions of the API.
+- Production WSGI: An interface that would allow this project to serve remote clients via a hosted web server.
+- Security: All SQL queries in this application are function-based and use parameters rather than string interpoliation, so it is fairly protected from typical SQL injection attacks. However, I would like to thoroughly pen test it to secure any vulnerabilities.
+- Authentication: A PKI implementation that would allow for only authenticated requests to be processed by the application.
+- Advanced error testing and handling: Fully pushing the logical limits of the server with a more robust testing strategy.
