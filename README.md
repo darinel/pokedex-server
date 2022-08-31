@@ -52,7 +52,7 @@ Note: make sure Python is installed and up-to-date on your system. [Download Pyt
 
 ``py -m venv venv``
 
-``.\venv\bin\activate``
+``.\venv\Scripts\activate``
 
 ``pip install Flask``
 
