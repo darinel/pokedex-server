@@ -1,7 +1,7 @@
 import sqlite3
 from jsonparse import jsonParser
 # Change to be triggered with webhook
-# change number 2
+# change number 2 showing JSon format 
 # JSON translation and parsing tables
 _namefields = ['english', 'japanese', 'chinese', 'french']
 _shortnames = ['en', 'jp', 'cn', 'fr']
